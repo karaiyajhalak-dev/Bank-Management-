@@ -8,41 +8,35 @@ public class Login extends JFrame {
     Login(){
         super("Bank Management System");
 
-        //ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("icon/bank.png"));
-        //Image i2=i1.getImage().getScaledInstance(100,100,Image.SCALE_DEFAULT);
-        //ImageIcon i3=new ImageIcon(i2);
-        //JLabel image=new JLabel(i3);
-        //image.setBounds(350,10,100,100);
-        //add(image);
-
-
-        // Frame size first
+        setLayout(null);
         setSize(850,480);
         setLocation(450,200);
 
-        setLayout(null);
-
-        // Load and scale image
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon/bank.png"));
-        Image i2 = i1.getImage().getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon i3 = new ImageIcon(i2);
-
-        JLabel image = new JLabel(i3);
-        image.setSize(120,120);
+        ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("icon/bank.png"));
+        Image i2=i1.getImage().getScaledInstance(100,100,Image.SCALE_DEFAULT);
+        ImageIcon i3=new ImageIcon(i2);
+        JLabel image=new JLabel(i3);
+        image.setBounds(350,10,100,100);
         add(image);
 
+
+        ImageIcon ii1 = new ImageIcon(ClassLoader.getSystemResource("icon/card.png"));
+        Image ii2 = ii1.getImage().getScaledInstance(100,100,Image.SCALE_DEFAULT);
+        ImageIcon ii3 = new ImageIcon(ii2);
+        JLabel iimage = new JLabel(ii3);
+        iimage.setBounds(630,350,100,100);
+        add(iimage);
+
+
+        ImageIcon iii1 = new ImageIcon(ClassLoader.getSystemResource("icon/backbg.png"));
+        Image iii2 = iii1.getImage().getScaledInstance(850,480,Image.SCALE_DEFAULT);
+        ImageIcon iii3 = new ImageIcon(iii2);
+        JLabel iiimage = new JLabel(iii3);
+        iiimage.setBounds(0,0,850,480);
+        add(iiimage);
+
+        
         setVisible(true);
-
-        int frameWidth = getWidth();
-        int frameHeight = getHeight();
-
-        int imgWidth = image.getWidth();
-        int imgHeight = image.getHeight();
-
-        int x = (frameWidth - imgWidth) / 2;
-        int y = (frameHeight - imgHeight) / 2;
-
-        image.setLocation(x, y);
 
     }
     public static void main(String[] args) {
