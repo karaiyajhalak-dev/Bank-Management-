@@ -1,3 +1,4 @@
+
 package bank.management.system;
 
 import java.awt.*;
@@ -11,6 +12,8 @@ public class Login extends JFrame implements ActionListener {
     JTextField textField2;
     JPasswordField passwordField3;
     JButton button1, button2, button3;
+    JButton button4;
+    boolean  showPassword = false;
 
     JPanel panel;
 
@@ -75,6 +78,15 @@ public class Login extends JFrame implements ActionListener {
         passwordField3 = new JPasswordField(15);
         passwordField3.setBounds(250, 210, 250, 30);
         panel.add(passwordField3);
+        // Eye Button (Show/Hide password)
+        button4 = new JButton(".^.");  // 🔥 Eye unicode icon
+        button4.setBounds(510, 210, 45, 30);
+        button4.setFont(new Font("Arial", Font.BOLD, 14));
+        button4.setForeground(Color.WHITE);
+        button4.setBackground(Color.black);
+        button4.addActionListener(this);
+        panel.add(button4);
+
 
         button1 = new JButton("SIGN IN");
         button1.setBounds(200, 260, 100, 30);
@@ -114,6 +126,16 @@ public class Login extends JFrame implements ActionListener {
             } else if (e.getSource() == button3) {
                 // signup code
             }
+            else if (e.getSource() == button4) {
+    if (!showPassword) {
+        passwordField3.setEchoChar((char) 0);   // show password
+        showPassword = true;
+    } else {
+        passwordField3.setEchoChar('•');        // hide password
+        showPassword = false;
+    }
+}
+
         } catch (Exception ex) {
             ex.printStackTrace();
         }
