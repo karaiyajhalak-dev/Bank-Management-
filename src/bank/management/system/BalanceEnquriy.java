@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 
-public class BalanceEnquiry extends JFrame implements ActionListener{
+public class BalanceEnquriy extends JFrame implements ActionListener{
 
     String pin;
     JLabel label2;

@@ -2,7 +2,7 @@ package bank.management.system;
 
 import java.sql.*;
 
-public class Conn {
+public class Connn {
     Connection connection;
     Statement statement;
     public Connn(){
